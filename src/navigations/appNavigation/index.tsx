@@ -9,6 +9,7 @@ import useLoginContext from '@hooks/useLoginContext';
 import Habits from '@screens/habits';
 import Tasks from '@screens/tasks';
 import CheckList from '@screens/check-list';
+import Testing from '@screens/testing';
 
 const {Navigator, Screen} = createNativeStackNavigator();
 
@@ -17,7 +18,9 @@ const AppNavigator = () => {
 
   const isLogin = loginContext.state;
 
-  return isLogin ? (
+  return <Testing/>
+
+  /* return isLogin ? (
     <>
       <Navigator screenOptions={{headerShown: false}}>
         <Screen name={RoutesScreen.HOME} component={Home} />
@@ -30,7 +33,7 @@ const AppNavigator = () => {
     </>
   ) : (
     <Login />
-  );
+  ); */
 };
 
 export default AppNavigator;

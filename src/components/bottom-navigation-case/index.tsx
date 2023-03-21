@@ -1,4 +1,4 @@
-import React, {FC} from 'react';
+import React, {FC,useState} from 'react';
 import {StackActions, useNavigation} from '@react-navigation/native';
 import {BottomNavigation, BottomNavigationTab} from '@ui-kitten/components';
 import {RoutesScreen} from '@routes/index';
@@ -7,7 +7,7 @@ import IconSVG from '@icons/index';
 const BottomNavigationCase: FC = () => {
   const navigation = useNavigation();
 
-  const [selectedIndex, setSelectedIndex] = React.useState(0);
+  const [selectedIndex, setSelectedIndex] = useState(0);
 
   const orderRoutes = [
     RoutesScreen.HOME,

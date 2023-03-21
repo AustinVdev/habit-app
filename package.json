@@ -41,6 +41,9 @@
     "@types/react": "^17"
   },
   "jest": {
+    "setupFiles": [
+      "./mock.js"
+    ],
     "preset": "react-native",
     "moduleFileExtensions": [
       "ts",
